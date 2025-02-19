@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Sign up Page</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../css/all.min.css" />
+    <!-- font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <!-- font link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <!-- page CSS -->
+    <link rel="stylesheet" href="../css/zaytona.css" />
+  </head>
+
+  <body>
+    <!-- زر إظهار الـ Sidebar -->
+    <button class="menu-toggle d-lg-none">☰</button>
+
+    <!-- nav -->
+    <nav class="navbar navbar-expand-lg mt-4 sticky-top navbar-all">
+      <div class="container">
+        <a class="navbar-brand col-lg-3" href="home.html">
+          <img src="../imgs/zaytoonaLogoWhite.svg" alt="Zaytouna" />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse justify-content-end"
+          id="navbarNav"
+        >
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link text-white" href="home.html">الرئيسية</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="stories.html">القصص</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="signUp.html">تسجيل الدخول</a>
+            </li>
+          </ul>
+          <div class="search-box ms-3">
+            <input type="text" placeholder="بحث" />
+            <button class="btn btn-sm text-muted">🔍</button>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- sidebar -->
+    <div class="sidebar">
+      <button class="close-sidebar">×</button>
+      <div class="sidebar-content">
+        <a href="home.html"
+          ><img
+            src="../imgs/zaytoonaLogoWhite.svg"
+            alt="logo"
+            class="sidebar-logo"
+        /></a>
+        <ul class="nav-links">
+          <li><a href="home.html">الرئيسية</a></li>
+          <li><a href="stories.html">القصص</a></li>
+          <li><a href="signUp.html">تسجيل الدخول</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- form -->
+    <div class="login-container">
+      <div class="card-login-box">
+        <div class="color">
+          <h2>مرحباً بكم</h2>
+          <p>
+            أهلاً بكم في زيتونة <br />نحن سعداء برؤيتك في منصتنا<br />
+            وباعتبارك عضو جديد<br />
+            فلنلهم وندعم بعضنا البعض<br />
+          </p>
+        </div>
+        <div>
+          <form id="loginForm">
+            <input
+              type="text"
+              id="username"
+              placeholder="اسم المستخدم"
+              required
+              style="margin-top: 4rem"
+            />
+            <input
+              type="password"
+              id="password"
+              placeholder="كلمة السر"
+              required
+            />
+            <input
+              type="password"
+              id="password"
+              placeholder="تأكيد كلمة السر"
+              required
+            />
+            <input
+              type="phoneNumber"
+              id="number"
+              placeholder=" رقم الجوال"
+              required
+            />
+            <input
+              type="email"
+              id="email"
+              placeholder="البريد الالكتروني "
+              required
+            />
+            <button type="submit" style="margin-bottom: 3.5rem">
+              تسجيل الدخول
+            </button>
+          </form>
+        </div>
+        <div class="characters-container">
+          <img
+            src="../imgs/boyForm.svg"
+            alt="طفل يمين"
+            class="character character-right"
+          />
+          <img
+            src="../imgs/girlForm.svg"
+            alt="طفلة يسار"
+            class="character character-left2"
+          />
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/all.min.js"></script>
+    <!-- AOS js -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- page js -->
+    <script src="../js/validation.js"></script>
+  </body>
+</html>
