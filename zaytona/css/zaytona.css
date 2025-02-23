@@ -899,6 +899,9 @@ a.new-account {
 /* End into section */
 
 /* Start section two */
+.privacy-content {
+  opacity: 0;
+}
 .privacy-content h2 {
   font-family: circle;
   font-size: 30px;

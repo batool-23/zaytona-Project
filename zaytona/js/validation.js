@@ -52,4 +52,11 @@ document.getElementById("login-btn").addEventListener("click", (e) => {
 });
 
 
+// اهتزاز الشخصية عند تركيز المستخدم على حقول الإدخال
+document.querySelectorAll("input").forEach((input) => {
+    input.addEventListener("focus", () => {
+        gsap.to(".character-right", { y: -5, duration: 0.2, repeat: 3, yoyo: true, ease: "power1.inOut" });
+        gsap.to(".character-left", { y: 10, duration: 0.2, repeat: 3, yoyo: true, ease: "power1.inOut" });
+    });
+});
 

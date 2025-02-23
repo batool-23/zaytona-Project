@@ -1,30 +1,8 @@
 
 
-
-// Top button
-const scrollTopBtn = document.getElementById("scrollTopBtn");
-
-window.addEventListener("scroll", () => {
-  if (window.scrollY > 200) {
-    gsap.to(scrollTopBtn, { opacity: 1, display: "block", duration: 0.3 });
-  } else {
-    gsap.to(scrollTopBtn, { opacity: 0, display: "none", duration: 0.3 });
-  }
-});
-
-scrollTopBtn.addEventListener("click", () => {
-  gsap.to(window, { scrollTo: 0, duration: 1 });
-});
-
-
-// loading-screen
-gsap.to(".loading-screen", { opacity: 0, duration: 0.5, delay: 1.5, onComplete: () => {
-    document.querySelector(".loading-screen").style.display = "none";
-}});
-
   
 // Navbar
-gsap.from(".navbar", { duration: 1, y: -50,delay: 2, opacity: 0, ease: "power2.out" });
+gsap.from(".navbar", { duration: 1, y: -50,delay: 0.2, opacity: 0, ease: "power2.out" });
 
 // تحريك نص الهيرو
 gsap.from(".hero-text", { duration: 1.5, x: 100, opacity: 0, delay: 2.5 });
@@ -64,12 +42,49 @@ cards.forEach((card) => {
   });
 });
 
+
+
+
+// الصفحات الثانوية
+// عنوان الصفحة
+gsap.from(".title", { 
+  duration: 1.5, 
+  delay:0.5,
+  opacity: 0, 
+  y: -50, 
+  ease: "power1.out", 
+  onComplete: function() {
+      gsap.to(".title", { 
+          x: 2, 
+          repeat: 4, 
+          yoyo: true, 
+          duration: 0.1 
+      });
+  }
+});
+
 // تأثير للفقرات
-// gsap.from(".paragraph", {
-//   opacity: 0,
-//   y: 50,
-//   duration: 2,
-//   delay: 3,
-//   ease: "power2.out",
-//   stagger: 0.2, // تأخير بسيط بين كل فقرة وأخرى
-// });
+gsap.from(".paragraph", {
+  opacity: 0,
+  y: 50,
+  duration: 2,
+  delay: 0.8,
+  ease: "power2.out",
+});
+
+// محتوى الصفحة
+gsap.to(".privacy-content", { opacity: 1, duration: 1.5, delay: 1, x: -10});
+gsap.to(".services-content", { opacity: 1, duration: 1.5, delay: 1, x: -10});
+gsap.to(".contact-container", { opacity: 1, duration: 1.5, delay: 1, x: -10});
+gsap.to(".faq-section", { opacity: 1, duration: 1.5, delay: 1, x: -10});
+gsap.to(".privacy", { opacity: 1, duration: 1.5, delay: 1, x: -10});
+
+// اهتزاز الشخصية عند تركيز المستخدم على حقول الإدخال
+document.querySelectorAll("input").forEach((input) => {
+  input.addEventListener("focus", () => {
+      gsap.to(".character-right", { y: -5, duration: 0.2, repeat: 3, yoyo: true, ease: "power1.inOut" });
+      gsap.to(".character-left", { y: 10, duration: 0.2, repeat: 3, yoyo: true, ease: "power1.inOut" });
+  });
+});
+
+
