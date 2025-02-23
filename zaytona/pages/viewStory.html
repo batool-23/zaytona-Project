@@ -27,7 +27,15 @@
 
   <body>
     <!-- زر إظهار الـ Sidebar -->
-    <button class="menu-toggle d-lg-none">☰</button>
+    <div class="nav-header2">
+      <button class="menu-toggle d-lg-none">☰</button>
+      <a href=""
+        ><img
+          src="../imgs/zaytoonaLogoWhite.svg"
+          alt="logo"
+          class="nav-header-logo"
+      /></a>
+    </div>
 
     <!-- nav -->
     <nav class="navbar navbar-expand-lg mt-4 sticky-top navbar-all">
@@ -55,7 +63,7 @@
               <a class="nav-link text-white" href="stories.html">القصص</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-white" href="signUp.html">تسجيل الدخول</a>
+              <a class="nav-link text-white" href="logIn.html">تسجيل الدخول</a>
             </li>
           </ul>
           <div class="search-box ms-3">
@@ -78,7 +86,7 @@
         <ul class="nav-links">
           <li><a href="home.html">الرئيسية</a></li>
           <li><a href="stories.html">القصص</a></li>
-          <li><a href="signUp.html">تسجيل الدخول</a></li>
+          <li><a href="logIn.html">تسجيل الدخول</a></li>
         </ul>
       </div>
     </div>
@@ -123,7 +131,8 @@
             <input id="image" class="form-control" />
           </div>
           <a href="#" class="button"
-            ><button>قم بتحميل الصورة<i class="fas fa-download"></i></button
+            ><button class="btn">
+              قم بتحميل الصورة<i class="fas fa-download"></i></button
           ></a>
         </form>
       </div>
@@ -135,13 +144,19 @@
         <div class="row align-items-center challenge-section">
           <div class="content col-md-8">
             <h2 style="margin-bottom: 2rem">
-              <span style="font-size: 40px">هل أنت مستعد للتحدي والمرح؟</span>
+              <span style="font-size: 40px" data-aos="fade-left"
+                >هل أنت مستعد للتحدي والمرح؟</span
+              >
             </h2>
             <p>
               الآن، بعد أن استمتعت بالقصة، حان وقت التحدي! استعد لاكتشاف الأنشطة
               الممتعة التي ستجعلك تعيش القصة مرة أخرى وتتعلم أشياء جديدة!
             </p>
-            <button>ابدأ الأنشطة <span class="arrow">←</span></button>
+            <a href="activites.html" style="text-decoration: none"
+              ><button class="btn">
+                ابدأ الأنشطة <span class="arrow">←</span>
+              </button></a
+            >
           </div>
           <div class="frame col-md-4 text-center">
             <img src="../imgs/girl.svg" alt="Character" class="girl-img" />
@@ -167,7 +182,7 @@
                 </p>
                 <div class="rating">★★★★★</div>
                 <a href="viewStory.html"
-                  ><button class="watch-btn">شاهد القصة</button></a
+                  ><button class="watch-btn btn">شاهد القصة</button></a
                 >
               </div>
             </div>
@@ -182,7 +197,7 @@
                 </p>
                 <div class="rating">★★★★★</div>
                 <a href="viewStory.html"
-                  ><button class="watch-btn">شاهد القصة</button></a
+                  ><button class="watch-btn btn">شاهد القصة</button></a
                 >
               </div>
             </div>
@@ -197,7 +212,7 @@
                 </p>
                 <div class="rating">★★★★★</div>
                 <a href="viewStory.html"
-                  ><button class="watch-btn">شاهد القصة</button></a
+                  ><button class="watch-btn btn">شاهد القصة</button></a
                 >
               </div>
             </div>
@@ -212,7 +227,7 @@
                 </p>
                 <div class="rating">★★★★★</div>
                 <a href="viewStory.html"
-                  ><button class="watch-btn">شاهد القصة</button></a
+                  ><button class="watch-btn btn">شاهد القصة</button></a
                 >
               </div>
             </div>
@@ -227,7 +242,7 @@
                 </p>
                 <div class="rating">★★★★★</div>
                 <a href="viewStory.html"
-                  ><button class="watch-btn">شاهد القصة</button></a
+                  ><button class="watch-btn btn">شاهد القصة</button></a
                 >
               </div>
             </div>
@@ -236,7 +251,7 @@
           <div class="swiper-pagination"></div>
         </div>
         <a href="stories.html" class="button"
-          ><button>استكشاف المزيد</button></a
+          ><button class="btn">استكشاف المزيد</button></a
         >
       </div>
     </section>
@@ -293,7 +308,20 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <!-- AOS js -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- تشغيل AOS -->
+    <script>
+      AOS.init({
+        duration: 1500,
+        easing: "ease-in-out",
+        delay: 200,
+        once: false,
+      });
+    </script>
+    <!-- إضافة مكتبة GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <!-- page js -->
     <script src="../js/zaytona.js"></script>
+    <script src="../js/GSAPanimation.js"></script>
   </body>
 </html>

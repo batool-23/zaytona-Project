@@ -19,7 +19,7 @@ body {
 
 /* start navbar */
 .navbar {
-  position: relative;
+  position: sticky;
   padding: 15px;
 }
 .navbar-all {
@@ -100,7 +100,7 @@ body {
   position: fixed;
   top: 15px;
   right: 15px;
-  font-size: 24px;
+  font-size: 30px;
   background: none;
   border: none;
   cursor: pointer;
@@ -118,6 +118,23 @@ body {
   display: block;
   margin-bottom: 20px;
 }
+.nav-header2 {
+  height: 80px;
+  background-color: #29cea3;
+}
+.nav-header-logo {
+  position: absolute;
+  left: 40px;
+  top: 20px;
+  width: 30%;
+  cursor: pointer;
+}
+@media (min-width: 1200px) {
+  .nav-header2,
+  .nav-header-logo {
+    display: none;
+  }
+}
 @media (max-width: 1200px) {
   .navbar {
     display: flex;
@@ -130,9 +147,17 @@ body {
   .navbar {
     display: none;
   }
+  .heronavbar {
+    background: none;
+    height: 450px;
+  }
   .sidebar {
     display: block;
     top: 0px;
+  }
+  .nav-header2,
+  .nav-header-logo {
+    display: block;
   }
 }
 /* End navbar */
@@ -148,6 +173,17 @@ body {
   font-size: 77px;
   font-weight: bold;
   color: white;
+}
+@media (max-width: 767px) {
+  .hero h1 {
+    top: 20%;
+    bottom: 0;
+    display: flex;
+    line-height: 1.5;
+    font-size: 60px;
+    font-family: VIP Hala;
+    color: #e55451;
+  }
 }
 /* End hero */
 
@@ -210,7 +246,7 @@ body {
   transform: translateX(-50%);
   z-index: 1;
 }
-.character {
+.Maincharacter {
   width: 100%;
   max-width: 400px;
   height: auto;
@@ -219,6 +255,31 @@ body {
   left: 50%;
   transform: translateX(-50%);
   z-index: 2;
+}
+@media (max-width: 767px) {
+  .intro .row {
+    flex-direction: column-reverse;
+  }
+  .frame {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-top: 0;
+    margin-bottom: 5rem;
+  }
+  .Maincharacter {
+    bottom: 10px;
+    left: 50%;
+  }
+  .frame-img {
+    left: 40%;
+    max-width: 90%;
+    height: auto;
+    position: relative;
+    top: 0;
+  }
 }
 /* End section two */
 
@@ -271,7 +332,7 @@ body {
 }
 @media (max-width: 768px) {
   .swiper-slide {
-    flex: 0 1 100%; /* يجعل كل بطاقة تأخذ صف كامل عند تصغير الشاشة */
+    flex: 0 1 100%;
   }
 }
 .story-card {
@@ -389,7 +450,7 @@ body {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
-  max-width: 600px;
+  max-width: 450px;
   margin: auto;
 }
 .grid-item {
@@ -648,6 +709,10 @@ textarea .form-control {
   justify-content: center;
 }
 @media (max-width: 768px) {
+  .footer {
+    background-image: url(../imgs/footer.jpg);
+    background-size: cover;
+  }
   .footer .row {
     flex-direction: column;
     align-items: center;
@@ -696,18 +761,38 @@ textarea .form-control {
   z-index: 1;
   width: 200px;
   height: auto;
+  bottom: -50px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 .character-right {
-  top: 80px;
-  right: -235px;
+  top: 90px;
+  right: -240px;
+}
+.character-right1 {
+  top: 60px;
+  right: -22px;
+  position: absolute;
+  z-index: 2;
+  width: 32px;
+  height: auto;
+  bottom: -50px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.character-left1 {
+  right: 470px;
+  position: absolute;
+  z-index: 2;
+  width: 25px;
+  height: auto;
+  bottom: 30px;
+  left: -62px;
+  transform: translateX(-50%);
 }
 .character-left {
   bottom: 30px;
-  left: -10px;
-}
-.character-left2 {
-  bottom: 30px;
-  left: -60px;
+  left: -62px;
 }
 .card-login-box .color {
   background-color: #e55451;
@@ -758,6 +843,7 @@ textarea .form-control {
 }
 #loginForm button:hover {
   background-color: #29cea3;
+  border-color: #29cea3;
 }
 #loginForm .options {
   margin-bottom: 1.5rem;
@@ -1029,6 +1115,44 @@ a.new-account {
   text-align: center;
   height: 100vh;
 }
+.contact-characters .character {
+  position: absolute;
+  z-index: 1;
+  width: 200px;
+  height: auto;
+  bottom: -50px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.contact-characters .character-right {
+  top: 90px;
+  right: -240px;
+}
+.contact-characters .character-right1 {
+  top: 60px;
+  right: -25px;
+  position: absolute;
+  z-index: 2;
+  width: 32px;
+  height: auto;
+  bottom: -50px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.contact-characters .character-left1 {
+  right: 420px;
+  position: absolute;
+  z-index: 2;
+  width: 25px;
+  height: auto;
+  bottom: 30px;
+  left: -62px;
+  transform: translateX(-50%);
+}
+.contact-characters .character-left {
+  bottom: 30px;
+  left: -22px;
+}
 #contactForm {
   background-color: white;
   border-color: #e55451;
@@ -1036,7 +1160,7 @@ a.new-account {
   border-radius: 30px;
   width: 90%;
   position: relative;
-  z-index: 2;
+  z-index: 1;
 }
 #contactForm input {
   background-color: white;
@@ -1069,6 +1193,10 @@ a.new-account {
   justify-content: center;
   width: 80%;
   height: 40px;
+}
+#contactForm button:hover {
+  background-color: #29cea3;
+  border-color: #29cea3;
 }
 /* End form section */
 
@@ -1155,24 +1283,6 @@ a.new-account {
 /* **************************************************************************************************************/
 
 @media (max-width: 991px) {
-  .intro .row {
-    flex-direction: column-reverse;
-    align-items: center;
-    text-align: center;
-  }
-  .frame {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-  }
-  .frame-img {
-    max-width: 90%;
-    height: auto;
-    position: relative;
-    top: 0;
-  }
   .character {
     max-width: 80%;
     position: relative;
@@ -1184,21 +1294,37 @@ a.new-account {
     display: none;
   }
 }
-
 @media (max-width: 768px) {
-  .content h2 {
-    font-size: 28px;
-    line-height: 1.5;
-    margin-top: 2rem;
-  }
-  .content p {
-    font-size: 20px; /* تصغير النص */
-  }
-  .content button {
-    font-size: 14px;
-    padding: 8px 14px;
-  }
   .characters-container {
     display: none;
   }
+}
+
+#scrollTopBtn {
+  position: fixed;
+  bottom: 20px;
+  width: 40px;
+  height: 40px;
+  right: 20px;
+  border: solid 1px #e55451;
+  background: none;
+  color: #e55451;
+  font-size: 24px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: none;
+}
+
+.loading-screen {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background: #e55451;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 4rem;
+  font-weight: bolder;
+  z-index: 999;
 }

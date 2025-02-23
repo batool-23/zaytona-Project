@@ -14,14 +14,24 @@
     <!-- Swiper CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <!-- AOS -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!-- page CSS -->
     <link rel="stylesheet" href="../css/zaytona.css" />
   </head>
 
   <body>
+    <!-- loading screen -->
+    <div class="loading-screen">
+      <h1>جاري التحميل...</h1>
+    </div>
+    
     <!-- زر إظهار الـ Sidebar -->
-    <button class="menu-toggle d-lg-none">☰</button>
+    <div class="nav-header2">
+      <button class="menu-toggle d-lg-none">☰</button>
+      <a href=""
+        ><img src="../imgs/zaytoonaLogoWhite.svg" alt="logo" class="nav-header-logo"
+      /></a>
+    </div>
 
     <!-- header and nav -->
     <div class="heronavbar">
@@ -50,7 +60,7 @@
             <a class="nav-link text-white" href="stories.html">القصص</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-white" href="signUp.html"
+            <a class="nav-link text-white" href="logIn.html"
               >تسجيل الدخول</a
             >
           </li>
@@ -62,16 +72,15 @@
         </div>
       </div>
     </nav>
-
     <!-- sidebar -->
     <div class="sidebar">
       <button class="close-sidebar">×</button>
       <div class="sidebar-content">
           <a href="home.html"><img src="../imgs/zaytoonaLogoWhite.svg" alt="logo" class="sidebar-logo"/></a>
           <ul class="nav-links">
+              <li><a href="home.html">الرئيسية</a></li>
               <li><a href="stories.html">القصص</a></li>
-              <li><a href="activites.html">الأنشطة</a></li>
-              <li><a href="signUp.html">تسجيل الدخول</a></li>
+              <li><a href="logIn.html">تسجيل الدخول</a></li>
           </ul>
       </div>
     </div>
@@ -79,7 +88,7 @@
     <!-- hero section -->
     <section class="hero">
       <div class="container">
-        <h1>أهلًا بكم أطفالنا الأعزاء في <br />رحلة التعلم والمرح</h1>
+        <h1 class="hero-text">أهلًا بكم أطفالنا الأعزاء في <br />رحلة التعلم والمرح</h1>
       </div>
     </section>
     </div>
@@ -89,20 +98,21 @@
       <div class="container">
         <div class="row">
           <div class="content col-lg-9">
-            <h2>
+            <h2 data-aos="fade-left">
               استمتع بتعلم تاريخ فلسطين من <br />
               خلال القصص
               <img src="../imgs/viewStoryVideo.svg" alt="أيقونة" class="icon">
             </h2>
-            <p>
+            <p class="paragraph">
               <br />زيتونة هي منصة تعليمية ممتعة للأطفال<br />
               تهدف للتعرف على فلسطين من خلال <br>القصص التفاعلية
             </p>
-            <button>ابدأ القصة <span class="arrow">←</span></button>
+            <button class="btn">ابدأ القصة <span class="arrow">←</span></button>
           </div>
-          <div class="frame col-lg-3" style="position: relative;">
+          <div class="frame col-lg-3" style="position: relative;"  data-aos="fade-down-right" data-aos-offset="300"
+          data-aos-easing="ease-in-sine">
             <img class="frame-img" src="../imgs/frame.svg" ></img>
-            <img class="character" src="../imgs/hiPoseBoy.svg" ></img>
+            <img class="Maincharacter" src="../imgs/hiPoseBoy.svg" ></img>
             <img class="icon"></img>
           </div>
         </div>
@@ -112,9 +122,9 @@
     <!-- swiper -->
     <section class="featureStories" style="margin-top: 8rem;">
       <div class="container">
-        <h2 class="title">القصص المميزة</h2>
+        <h2 class="title section-title">القصص المميزة</h2>
       <div class="swiper mySwiper">
-            <div class="swiper-wrapper">
+            <div class="swiper-wrapper" data-aos="fade-left">
                 <!-- بطاقة 1 -->
                 <div class="swiper-slide">
                     <div class="story-card">
@@ -122,7 +132,7 @@
                         <h3>قصة تاريخ فلسطين</h3>
                         <p>تتناول هذه القصة، حياة طفلة فلسطينية تهجرت من أرضها<br> منذ زمن طويل.</p>
                         <div class="rating">★★★★★</div>
-                        <a href="viewStory.html"><button class="watch-btn" >شاهد القصة</button></a>
+                        <a href="viewStory.html"><button class="watch-btn btn" >شاهد القصة</button></a>
                     </div>
                 </div>
                 <!-- بطاقة 2 -->
@@ -132,7 +142,7 @@
                         <h3>قصة تاريخ فلسطين</h3>
                         <p>تتناول هذه القصة، حياة طفلة فلسطينية تهجرت من أرضها<br> منذ زمن طويل.</p>
                         <div class="rating">★★★★★</div>
-                        <a href="viewStory.html"><button class="watch-btn" >شاهد القصة</button></a>
+                        <a href="viewStory.html"><button class="watch-btn btn" >شاهد القصة</button></a>
                     </div>
                 </div>
                 <!-- بطاقة 3 -->
@@ -142,7 +152,7 @@
                         <h3>قصة تاريخ فلسطين</h3>
                         <p>تتناول هذه القصة، حياة طفلة فلسطينية تهجرت من أرضها<br> منذ زمن طويل.</p>
                         <div class="rating">★★★★★</div>
-                        <a href="viewStory.html"><button class="watch-btn" >شاهد القصة</button></a>
+                        <a href="viewStory.html"><button class="watch-btn btn" >شاهد القصة</button></a>
                     </div>
                 </div>
                 <!-- بطاقة 4 -->
@@ -152,7 +162,7 @@
                       <h3>قصة تاريخ فلسطين</h3>
                       <p>تتناول هذه القصة، حياة طفلة فلسطينية تهجرت من أرضها<br> منذ زمن طويل.</p>
                       <div class="rating">★★★★★</div>
-                      <a href="viewStory.html"><button class="watch-btn" >شاهد القصة</button></a>
+                      <a href="viewStory.html"><button class="watch-btn btn" >شاهد القصة</button></a>
                   </div>
               </div>
               <!-- بطاقة 5 -->
@@ -162,7 +172,7 @@
                     <h3>قصة تاريخ فلسطين</h3>
                     <p>تتناول هذه القصة، حياة طفلة فلسطينية تهجرت من أرضها<br> منذ زمن طويل.</p>
                     <div class="rating">★★★★★</div>
-                    <a href="viewStory.html"><button class="watch-btn" >شاهد القصة</button></a>
+                    <a href="viewStory.html"><button class="watch-btn btn" >شاهد القصة</button></a>
                 </div>
             </div>
             </div>
@@ -175,7 +185,7 @@
     <!-- section four -->
     <section class="reviews" style="margin-top: 8rem;">
       <div class="container">
-        <h1 class="heading">رأي الأهالي في تجربتهم</h1>
+        <h1 class="heading" data-aos="fade-left">رأي الأهالي في تجربتهم</h1>
         <div class="cards">
           <div class="card1"></div>
           <div class="card2"></div>
@@ -189,23 +199,25 @@
       <div class="container">
         <div class="row">
           <div class="content col-lg-7">
-            <h2 class="heading">هل تود مشاركتنا صورتك الرائعة؟</h2>
-            <p>إذا كنت ترغب في ذلك، أرسل لنا صورة تظهر فيها وأنت تمارس نشاطك المفضل
+            <h2 class="heading" data-aos="fade-left">هل تود مشاركتنا صورتك الرائعة؟</h2>
+            <p class="paragraph">إذا كنت ترغب في ذلك، أرسل لنا صورة تظهر فيها وأنت تمارس نشاطك المفضل
               على زيتونة وسنشاركها مع الأصدقاء.</p>
-            <a href="#" ><button>قم بتحميل الصورة<i class="fas fa-download"></i></button></a>
+            <a href="#" ><button class="btn">قم بتحميل الصورة<i class="fas fa-download"></i></button></a>
           </div>
           <div class="photoframe col-lg-5">
-            <div class="container">
-              <div class="grid-item"><img src="../imgs/girl.jpg" alt="صورة 1"></div>
-              <div class="grid-item"><img src="../imgs/girl.jpg" alt="صورة 1"></div>
-              <div class="grid-item"><img src="../imgs/girl.jpg" alt="صورة 1"></div>
-              <div class="grid-item"><img src="../imgs/girl.jpg" alt="صورة 1"></div>
+            <div class="container" data-aos="fade-down-right" data-aos-offset="400"
+            data-aos-easing="ease-in-sine">
+              <div class="grid-item story-card"><img src="../imgs/girl.jpg" alt="صورة 1"></div>
+              <div class="grid-item story-card"><img src="../imgs/girl.jpg" alt="صورة 1"></div>
+              <div class="grid-item story-card"><img src="../imgs/girl.jpg" alt="صورة 1"></div>
+              <div class="grid-item story-card"><img src="../imgs/girl.jpg" alt="صورة 1"></div>
             </div>
           </div>
           </div>
           </div>
     </section>
 
+    <button id="scrollTopBtn">⬆</button>
     <!-- footer -->
     <footer class="footer">
       <div class="container" style="padding-top: 5.5rem">
@@ -251,6 +263,7 @@
       </div>
     </footer>
 
+
     <!-- Bootstrap Bundle with Popper -->
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/all.min.js"></script>
@@ -258,7 +271,20 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <!-- AOS js -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- تشغيل AOS -->
+    <script>
+      AOS.init({
+          duration: 1500, 
+          easing: "ease-in-out",
+          delay: 200, 
+          once: false, 
+      });
+    </script>
+    <!-- إضافة مكتبة GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <!-- page js -->
     <script src="../js/zaytona.js"></script>
+    <script src="../js/GSAPanimation.js"></script>
   </body>
 </html>

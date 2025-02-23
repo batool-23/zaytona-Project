@@ -19,10 +19,17 @@
     <!-- page CSS -->
     <link rel="stylesheet" href="../css/zaytona.css" />
   </head>
-
   <body>
     <!-- زر إظهار الـ Sidebar -->
-    <button class="menu-toggle d-lg-none">☰</button>
+    <div class="nav-header2">
+      <button class="menu-toggle d-lg-none">☰</button>
+      <a href=""
+        ><img
+          src="../imgs/zaytoonaLogoWhite.svg"
+          alt="logo"
+          class="nav-header-logo"
+      /></a>
+    </div>
 
     <!-- nav -->
     <nav class="navbar navbar-expand-lg mt-4 sticky-top navbar-all">
@@ -50,7 +57,7 @@
               <a class="nav-link text-white" href="stories.html">القصص</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-white" href="signUp.html">تسجيل الدخول</a>
+              <a class="nav-link text-white" href="logIn.html">تسجيل الدخول</a>
             </li>
           </ul>
           <div class="search-box ms-3">
@@ -73,7 +80,7 @@
         <ul class="nav-links">
           <li><a href="home.html">الرئيسية</a></li>
           <li><a href="stories.html">القصص</a></li>
-          <li><a href="signUp.html">تسجيل الدخول</a></li>
+          <li><a href="logIn.html">تسجيل الدخول</a></li>
         </ul>
       </div>
     </div>
@@ -81,7 +88,7 @@
     <!-- section one -->
     <section class="aboutUs-intro" style="margin-top: 5rem">
       <div class="container">
-        <h1 class="title">من نحن</h1>
+        <h1 class="title section-title">من نحن</h1>
         <p>
           نحن في زيتونة نؤمن بقوة التعليم و الإبداع. نسعى إلى تقديم محتوى تعليمي
           ممتع وملهم للأطفال، مع التركيز على ثقافة فلسطين وتاريخها، من خلال قصص
@@ -201,12 +208,16 @@
       </div>
     </footer>
 
-    <!-- page js -->
-    <script src="../js/zaytona.js"></script>
     <!-- Bootstrap Bundle with Popper -->
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/all.min.js"></script>
     <!-- AOS js -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- إضافة مكتبة GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <!-- page js -->
+    <script src="../js/zaytona.js"></script>
+    <script src="../js/GSAPanimation.js"></script>
   </body>
 </html>

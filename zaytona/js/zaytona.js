@@ -1,4 +1,5 @@
 
+
 // Sidebar Toggle
 document
 .querySelector(".menu-toggle")
@@ -49,5 +50,4 @@ video.addEventListener("click", function () {
 });
 
 
-    
-    
+
