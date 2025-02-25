@@ -399,7 +399,7 @@ body {
 /* Start section four */
 .reviews {
   background-image: url(../imgs/whiteSection.svg);
-  height: 100vh;
+  height: 70vh;
   width: 100%;
   padding: 0;
   margin: 0;
@@ -411,9 +411,55 @@ body {
   color: #e55451;
   padding-top: 5.5rem;
 }
+.reviews .reviewCards {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 5rem;
+}
+.reviews .reviewCards .card {
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  flex: 1;
+  min-width: 300px;
+  transition: transform 0.3s ease-in-out;
+}
+.reviews .reviewCards .card:hover {
+  transform: translateY(-5px);
+}
+.quote {
+  font-family: circle;
+  font-style: italic;
+  color: #211c18;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+.client-info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.client-info img {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+}
+.client-info h4 {
+  margin: 0;
+  font-size: 16px;
+}
+.country {
+  font-size: 14px;
+  color: gray;
+}
 @media (max-width: 768px) {
   .reviews {
-    background-repeat: no-repeat;
+    background: none;
+    height: 100vh;
   }
 }
 /* End section four */

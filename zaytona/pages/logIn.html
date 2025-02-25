@@ -98,11 +98,11 @@
           </p>
         </div>
         <div>
-          <form action="home.html" method="POST" id="loginForm">
+          <form id="loginForm">
             <input
               type="text"
               id="username"
-              placeholder="اسم المستخدم"
+              placeholder="البريد الالكتروني"
               required
               style="margin-top: 4rem"
             />
@@ -112,7 +112,7 @@
               placeholder="كلمة السر"
               required
             />
-            <button type="submit" id="login-btn">تسجيل الدخول</button>
+            <button type="submit">تسجيل الدخول</button>
             <div class="options">
               <a href="#">هل نسيت كلمة السر؟</a>
               <a href="signUp.html" class="new-account"
@@ -151,8 +151,8 @@
     </div>
 
     <!-- Bootstrap Bundle with Popper -->
-    <script src="js/bootstrap.bundle.min.js"></script>
-    <script src="js/all.min.js"></script>
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <script src="../js/all.min.js"></script>
     <!-- AOS js -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <!-- تشغيل AOS -->
@@ -164,10 +164,34 @@
         once: false,
       });
     </script>
+
+    <script>
+      // اهتزاز الشخصية عند تركيز المستخدم على حقول الإدخال
+      document.querySelectorAll("input").forEach((input) => {
+        input.addEventListener("focus", () => {
+          gsap.to(".character-right", {
+            y: -5,
+            duration: 0.2,
+            repeat: 3,
+            yoyo: true,
+            ease: "power1.inOut",
+          });
+          gsap.to(".character-left", {
+            y: 10,
+            duration: 0.2,
+            repeat: 3,
+            yoyo: true,
+            ease: "power1.inOut",
+          });
+        });
+      });
+    </script>
+
     <!-- إضافة مكتبة GSAP -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <!-- page js -->
     <script src="../js/validation.js"></script>
+    <script type="module" src="../js/login.js"></script>
   </body>
 </html>

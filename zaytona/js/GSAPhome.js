@@ -21,3 +21,5 @@ gsap.to(".loading-screen", { opacity: 0, duration: 0.5, delay: 1.5, onComplete: 
 
 // Navbar
 gsap.from(".navbar", { duration: 1, y: -50,delay: 2, opacity: 0, ease: "power2.out" });
+
+
