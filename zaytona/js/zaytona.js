@@ -49,5 +49,26 @@ video.addEventListener("click", function () {
     }
 });
 
+document.getElementById("pageSelector").addEventListener("change", function(
+) {
+    let selectedPage = this.value;
+    if(selectedPage){
+        Window.location.href=selectedPage;// الانتقال للصفحة المحددة
+    }
+});
 
+function navigate() {
+    var select = document.getElementById("mySelect");
+    var value = select.value;
+    if (value) {
+        window.location.href=value;
+    }
+}
+function goToPage(){
+    window.location.href="viewStory2.html"
 
+}
+function goToPage2(){
+    window.location.href="viewStory1.html"
+
+}
